@@ -1,0 +1,117 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-light: #f9f7f4;
+    --primary-dark: #2c2b28;
+    --accent: #f0ac7a;
+    --accent-light: #f7c59f;
+    --text-dark: #2c2b28;
+    --text-soft: #5a4a3a;
+    --white: #ffffff;
+    --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+    --shadow-hover: 0 20px 30px rgba(0,0,0,0.1);
+    --radius-card: 24px;
+    --radius-btn: 48px;
+}
+
+body {
+    font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* 导航 */
+.navbar {
+    background: var(--primary-dark);
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--accent-light);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6ddd0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--accent-light);
+    border-bottom-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* 页脚 */
+footer {
+    background: var(--primary-dark);
+    color: #cbc3b5;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+}
+
+/* 容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* 按钮 */
+.btn-more {
+    background: rgba(0,0,0,0.05);
+    border-radius: 60px;
+    padding: 0.3rem 1.2rem;
+    transition: 0.2s;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* 响应式 */
+@media (max-width: 700px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+}
